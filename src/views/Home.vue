@@ -10,7 +10,15 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
+  data(){
+    return{
+      namepage : 'home'
+    }
+  },
   name: 'Home',
+  created(){
+    this.$root.changePage(this.namepage)
+  },
   components: {
     HelloWorld
   }
