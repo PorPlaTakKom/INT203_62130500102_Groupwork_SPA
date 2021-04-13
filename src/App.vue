@@ -33,7 +33,11 @@
 </template>
 
 <script>
+
+
+
 export default {
+
   data(){
     return{
       currentpage : null
@@ -42,7 +46,7 @@ export default {
   methods:{
     changePage(namePage){ //this method make a chenge currentnamepage 
       this.currentpage = namePage
-      console.log(this.currentpage)
+      console.log(`currentpage: ${this.currentpage}`)
     }
   }
 }

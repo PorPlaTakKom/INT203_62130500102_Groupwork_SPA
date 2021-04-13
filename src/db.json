@@ -1,0 +1,12 @@
+{
+  "pokedex": [
+    {
+      "pokemonName": "Pikachu",
+      "pokemonHeight": "0.4",
+      "pokemonWeight": "6",
+      "pokemonType": "Electric",
+      "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+      "id": 1
+    }
+  ]
+}

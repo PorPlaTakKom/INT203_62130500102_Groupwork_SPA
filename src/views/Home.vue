@@ -1,26 +1,23 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <img class="w-1/6 mx-auto" alt="logo" src="../images/pikachu.png" />
+    <div class="text-white text-3xl font-bold">
+      <p>Welcome</p>
+      <p class="text-2xl">This site is a collection of Pokemon's information</p>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  data(){
-    return{
-      namepage : 'home'
-    }
+  data() {
+    return {
+      namepage: "home",
+    };
   },
-  name: 'Home',
-  created(){
-    this.$root.changePage(this.namepage)
+  methods: {},
+  created() {
+    this.$root.changePage(this.namepage); // this function sent namepage to root function when this page loaded
   },
-  components: {
-    HelloWorld
-  }
-}
+};
 </script>
