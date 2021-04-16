@@ -1,14 +1,19 @@
 <template>
-  <div>
+  <div class="bg-red-600 rounded-md m-5 p-5 shadow-xl">
     <RegisForm/>
+  </div>
+  <div>
+    <PokeTable/>
   </div>
 </template>
 
 <script>
 import RegisForm from "../components/RegisForm.vue";
+import PokeTable from "../components/PokeTable.vue";
 export default {
   components: {
-    RegisForm
+    RegisForm,
+    PokeTable
   },
   data() {
     return {

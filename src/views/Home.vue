@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <img class="w-1/6 mx-auto" alt="logo" src="../images/pikachu.png" />
-    <div class="text-white text-3xl font-bold">
-      <p>Welcome</p>
-      <p class="text-2xl">This site is a collection of Pokemon's information</p>
+    <div class="h-auto w-auto m-5 p-3 bg-yellow-300 rounded-md shadow-xl">
+      <div class="text-white text-3xl font-bold">
+        <img class="w-1/6 mx-auto" alt="logo" src="../images/pikachu.png" />
+        <p>Welcome</p>
+        <p class="text-2xl">This site is a collection of Pokemon's information</p>
+      </div>
     </div>
-  </div>
 </template>
 
 <script>

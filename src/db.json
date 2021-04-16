@@ -7,6 +7,30 @@
       "pokemonType": "Electric",
       "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
       "id": 1
+    },
+    {
+      "pokemonName": "Bulbasaur",
+      "pokemonHeight": "0.7",
+      "pokemonWeight": "6.9",
+      "pokemonType": "Grass, Poison",
+      "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+      "id": 2
+    },
+    {
+      "pokemonName": "Charmander",
+      "pokemonHeight": "0.6",
+      "pokemonWeight": "8.5",
+      "pokemonType": "Fire",
+      "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+      "id": 3
+    },
+    {
+      "pokemonName": "1",
+      "pokemonHeight": "1",
+      "pokemonWeight": "1",
+      "pokemonType": "1",
+      "pokemonImg": "1",
+      "id": 4
     }
   ]
 }

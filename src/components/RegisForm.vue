@@ -2,7 +2,7 @@
   <div class="flex justify-center w-full mx-auto">
     <form @submit.prevent="registerFrom">
 
-      <div class="flex flex-col pb-2">
+      <div class="flex flex-col pb-3">
           <label for="pekemonName" class="font-bold text-white text-xl p-1">Pokemon Name</label>
           <input class="focus:outline-none p-1 w-5/12 rounded-md mx-auto"
           id="pokemonName"
@@ -15,14 +15,14 @@
           <label for="height" class="font-bold text-white text-xl">Height:</label>
           <input class="focus:outline-none p-1 w-2/12 rounded-md" 
           id="height"
-          type="number"
+          type="float"
           placeholder="50"
           v-model="pokemonHeight"/>
 
           <label for="weight" class="font-bold text-white text-xl">Weight:</label>
           <input class="focus:outline-none w-2/12 rounded-md p-1"
           id="weight"
-          type="number"
+          type="float"
           placeholder="15.2"
           v-model="pokemonWeight"/>
       </div>
@@ -62,7 +62,7 @@ export default {
       pokemonWeight: '',
       pokemonType:'',
       pokemonImg: '',
-      pokedex: [],
+      pokedex: []
     };
   },
   methods: {
@@ -76,6 +76,13 @@ export default {
                 pokemonType: this.pokemonType,
                 pokemonImg: this.pokemonImg
               })
+              location.reload()
+
+              // this.pokemonName = ''
+              // this.pokemonHeight = ''
+              // this.pokemonWeight = ''
+              // this.pokemonType = ''
+              // this.pokemonImg = ''
       }else{
         console.log('Summit is not data, Can not push data to database ')
       }
@@ -83,27 +90,26 @@ export default {
     },
     async addPokedata(pekeData){
       try{
+        const pokedata = {
+          pokemonName: pekeData.pokemonName,
+          pokemonHeight: pekeData.pokemonHeight,
+          pokemonWeight: pekeData.pokemonWeight,
+          pokemonType: pekeData.pokemonType,
+          pokemonImg: pekeData.pokemonImg
+          }
         const res = await fetch('http://localhost:5000/pokedex',
         {
         method: 'POST',
         headers:{
           'content-type': 'application/json'
         },
-        body: JSON.stringify(
-          {
-          pokemonName: pekeData.pokemonName,
-          pokemonHeight: pekeData.pokemonHeight,
-          pokemonWeight: pekeData.pokemonWeight,
-          pokemonType: pekeData.pokemonType,
-          pokemonImg: pekeData.pokemonImg
-          })
+        body: JSON.stringify(pokedata)
         })
-        const data = await res.json
-        this.pokedex.push(data)
+        this.pokedex.push(await res.json())
       }catch(error){
         console.log(`error : ${error}`)
       }
     }
-  },
-};
+  }
+}
 </script>

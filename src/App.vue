@@ -4,7 +4,7 @@
       <div class="flex justify-center text-sm font-bold font-sans text-gray-400 ">
         
         <router-link to="/">
-          <div class="w-28 text-center hover:bg-gray-500 hover:text-white pb-2 rounded-b-md" :class="[currentpage === 'home' ? 'bg-gray-500 text-white ' : 'bg-none']" >
+          <div class="w-28 text-center hover:bg-yellow-400 hover:text-white pb-2 rounded-b-md" :class="[currentpage === 'home' ? 'bg-yellow-400 text-white ' : 'bg-none']" >
             <i class="material-icons mt-2">home</i>
             <p>HOME</p>
           </div>
@@ -26,7 +26,7 @@
       </div>
     </nav>
 
-    <div class="h-auto w-2/3 mx-auto items-center text-center bg-red-400 mt-10 p-5 rounded-lg shadow-lg">
+    <div class="h-auto w-2/3 mx-auto items-center text-center">
       <router-view />
     </div>
   </div>
@@ -37,7 +37,6 @@
 
 
 export default {
-
   data(){
     return{
       currentpage : null
