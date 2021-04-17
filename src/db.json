@@ -23,14 +23,6 @@
       "pokemonType": "Fire",
       "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
       "id": 3
-    },
-    {
-      "pokemonName": "1",
-      "pokemonHeight": "1",
-      "pokemonWeight": "1",
-      "pokemonType": "1",
-      "pokemonImg": "1",
-      "id": 4
     }
   ]
 }

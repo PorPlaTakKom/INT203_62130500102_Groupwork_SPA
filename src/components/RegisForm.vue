@@ -46,7 +46,7 @@
       </div>
 
       <div class="mt-5">
-         <button class="bg-blue-400 rounded-md p-1 text-white font-bold focus:outline-none" type="submit" >Summit</button>
+         <button class="bg-green-500 rounded-md p-1 text-white font-bold focus:outline-none" type="submit" >Submit</button>
       </div>
     </form>
   </div>
@@ -62,27 +62,22 @@ export default {
       pokemonWeight: '',
       pokemonType:'',
       pokemonImg: '',
-      pokedex: []
-    };
+    }
   },
   methods: {
     registerFrom() {
-
       if(this.pokemonName !== '' && this.pokemonHeight !== '' && this.pokemonWeight !== ''  && this.pokemonType !== '' && this.pokedex !== null){
-              this.addPokedata({
-                pokemonName: this.pokemonName,
-                pokemonHeight: this.pokemonHeight,
-                pokemonWeight: this.pokemonWeight,
-                pokemonType: this.pokemonType,
-                pokemonImg: this.pokemonImg
-              })
-              location.reload()
-
-              // this.pokemonName = ''
-              // this.pokemonHeight = ''
-              // this.pokemonWeight = ''
-              // this.pokemonType = ''
-              // this.pokemonImg = ''
+          if(this.pokemonImg === ''){
+            this.pokemonImg = "https://cdn.pixabay.com/photo/2019/11/27/14/06/pokemon-4657023_960_720.png"
+          }
+          this.addPokedata({
+            pokemonName: this.pokemonName,
+            pokemonHeight: this.pokemonHeight,
+            pokemonWeight: this.pokemonWeight,
+            pokemonType: this.pokemonType,
+            pokemonImg: this.pokemonImg
+          })
+          window.location.reload()
       }else{
         console.log('Summit is not data, Can not push data to database ')
       }
@@ -97,7 +92,7 @@ export default {
           pokemonType: pekeData.pokemonType,
           pokemonImg: pekeData.pokemonImg
           }
-        const res = await fetch('http://localhost:5000/pokedex',
+        await fetch('http://localhost:5000/pokedex',
         {
         method: 'POST',
         headers:{
@@ -105,7 +100,6 @@ export default {
         },
         body: JSON.stringify(pokedata)
         })
-        this.pokedex.push(await res.json())
       }catch(error){
         console.log(`error : ${error}`)
       }

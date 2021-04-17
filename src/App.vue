@@ -27,15 +27,12 @@
     </nav>
 
     <div class="h-auto w-2/3 mx-auto items-center text-center">
-      <router-view />
+      <router-view/>
     </div>
   </div>
 </template>
 
 <script>
-
-
-
 export default {
   data(){
     return{
