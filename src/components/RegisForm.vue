@@ -92,7 +92,7 @@ export default {
           pokemonType: pekeData.pokemonType,
           pokemonImg: pekeData.pokemonImg
           }
-        await fetch('http://localhost:5000/pokedex',
+        await fetch(this.$root.dburl,
         {
         method: 'POST',
         headers:{

@@ -36,7 +36,8 @@
 export default {
   data(){
     return{
-      currentpage : null
+      currentpage : null,
+      dburl: 'http://localhost:5000/pokedex'
     }
   },
   methods:{

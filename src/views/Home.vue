@@ -6,16 +6,25 @@
         <p class="text-2xl">This site is a collection of Pokemon's information</p>
       </div>
     </div>
+    <div class="h-auto w-auto m-5 p-5 bg-yellow-200 rounded-md shadow-xl">
+      <PokeCard/>
+    </div>
 </template>
 
 <script>
+import PokeCard from "../components/PokeCard.vue";
 export default {
+  components:{
+    PokeCard
+  },
   data() {
     return {
       namepage: "home",
-    };
+      pokename: {}
+    }
   },
-  methods: {},
+  methods: {
+  },
   created() {
     this.$root.changePage(this.namepage); // this function sent namepage to root function when this page loaded
   },

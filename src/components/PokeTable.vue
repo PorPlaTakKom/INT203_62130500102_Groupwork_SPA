@@ -90,7 +90,7 @@ export default {
   methods: {
     async getPokeData() {
       try {
-        const res = await fetch("http://localhost:5000/pokedex");
+        const res = await fetch(this.$root.dburl);
         const data = await res.json();
         return data;
       } catch (error) {
