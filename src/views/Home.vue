@@ -1,14 +1,14 @@
 <template>
-    <div class="h-auto w-auto m-5 p-3 bg-yellow-300 rounded-md shadow-xl">
+    <base-card class="bg-yellow-300">
       <div class="text-white text-3xl font-bold">
         <img class="w-1/6 mx-auto" alt="logo" src="../images/pikachu.png" />
         <p>Welcome</p>
         <p class="text-2xl">This site is a collection of Pokemon's information</p>
       </div>
-    </div>
-    <div class="h-auto w-auto m-5 p-5 bg-yellow-200 rounded-md shadow-xl">
+    </base-card>
+    <base-card class="bg-yellow-200">
       <PokeCard/>
-    </div>
+    </base-card>
 </template>
 
 <script>

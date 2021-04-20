@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-red-600 rounded-md m-5 p-5 shadow-xl">
+  <base-card class="bg-red-600">
     <RegisForm/>
-  </div>
+  </base-card>
   <div>
     <PokeTable/>
   </div>

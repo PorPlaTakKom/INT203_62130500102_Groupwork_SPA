@@ -1,15 +1,17 @@
 <template>
-  <div>
+  <div class="p-5">
     <poke-search @poke-name="getPokename"></poke-search>
   </div>
-  <div class="flex flex-wrap -mx-4">
+  <div class="flex flex-wrap -mx-4" v-if="filterPoke.length > 0">
     <div v-for="poke in filterPoke" :key="poke.id" class="md:w-1/3 px-1 mb-9">
       <div class="flex flex-col items-center">
-        <img :src="poke.pokemonImg" alt="image" class="w-36"/>
+        <img :src="poke.pokemonImg" alt="image" class="w-36" />
         <p>{{ poke.pokemonName }}</p>
       </div>
-    
     </div>
+  </div>
+  <div v-else>
+    <p class="font-bold text-5xl">NOT FOUND</p>
   </div>
 </template>
 
