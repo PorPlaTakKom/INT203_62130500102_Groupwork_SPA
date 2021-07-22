@@ -2,7 +2,6 @@
   <div class="h-screen bg-gray-50">
     <nav>
       <div class="flex justify-center text-sm font-bold font-sans text-gray-400 ">
-        
         <router-link to="/">
           <div class="w-28 text-center hover:bg-yellow-400 hover:text-white pb-2 rounded-b-md" :class="[currentpage === 'home' ? 'bg-yellow-400 text-white ' : 'bg-none']" >
             <i class="material-icons mt-2">home</i>
