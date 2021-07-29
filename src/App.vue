@@ -9,6 +9,7 @@
           </div>
         </router-link>
 
+
         <router-link to="/pokedex">
           <div class="w-28 text-center hover:bg-red-600 hover:text-white pb-2 rounded-b-md" :class="[currentpage === 'pokedex' ? 'bg-red-600 text-white ' : 'bg-none']">  
             <i class="material-icons mt-2">catching_pokemon</i>
